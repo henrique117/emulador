@@ -54,9 +54,10 @@ class CPU {
         Byte PC;        // program counter
         Word A, X, Y;   // registers | GPR: X, Y | A: For saving results
         Memory* memory; // alocate a memory for the CPU
+        bool running;
 
     public:
-        CPU(Memory* mem) : PC(0x00), A(0), X(0), Y(0), memory(mem) {}   // constructor of the CPU | initialize all the registers as 0 | point the PC to the first adress
+        CPU(Memory* mem) : PC(0x00), A(0), X(0), Y(0), memory(mem), running(true) {}   // constructor of the CPU | initialize all the registers as 0 | point the PC to the first adress
 
         void LOAD_REG_X() {     // load the X register
             this->X = this->DECODE_VALUE();
@@ -129,9 +130,11 @@ class CPU {
         }
 
         void RUN(size_t cycles) {           // run the cycles
-            for (size_t i = 0; i < cycles; i++) {
+            size_t i = 0;
+            while (i < cycles && running == true) {
                 this->EXECUTE();
                 this->PC++;
+                i++;
             }
         }
 
