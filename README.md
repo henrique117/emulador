@@ -22,8 +22,7 @@ Este projeto é um estudo contínuo e pode evoluir para a emulação de diferent
 ---
 
 ## **Tecnologias Utilizadas**
-- **Linguagem:** *(Especifique a linguagem utilizada, ex.: C++, Python, Rust, etc.)*
-- **Ferramentas:** *(Ex.: compiladores, bibliotecas, interpretadores, etc.)*
+- **Linguagem:** *C++*
 
 ---
 
@@ -56,8 +55,7 @@ This project is a continuous study and may evolve to emulate different architect
 ---
 
 ## **Technologies Used**
-- **Language:** *(Specify the programming language, e.g., C++, Python, Rust, etc.)*
-- **Tools:** *(E.g., compilers, libraries, interpreters, etc.)*
+- **Language:** *C++*
 
 ---
 
